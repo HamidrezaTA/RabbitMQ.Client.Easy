@@ -8,6 +8,7 @@
     <Authors>Hamidreza.Taammoli</Authors>
     <Description>RabbitMQ Client Easy</Description>
     <PackageTags>RabbitMQ</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -17,5 +18,9 @@
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
     <PackageReference Include="RabbitMq.Client" Version="6.5.0" />
   </ItemGroup>
+
+    <ItemGroup>
+      <None Include="README.md" Pack="true" PackagePath=""/>
+    </ItemGroup>
 
 </Project>

@@ -3,8 +3,8 @@ The goal of this project is to make using of RabbitMQ client for dotnet core muc
 
 # How to use
 To use this project add RabbitMQ.Client.Easy to your project.
-```
-dotnet package add RabbitMQ.Client.Easy 
+```shell
+dotnet add package RabbitMQ.Client.Easy 
 ```
 To use it in a dotnet core WebApi project:
 
