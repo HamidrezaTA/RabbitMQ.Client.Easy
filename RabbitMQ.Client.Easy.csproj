@@ -8,7 +8,6 @@
     <Authors>Hamidreza.Taammoli</Authors>
     <Description>RabbitMQ Client Easy</Description>
     <PackageTags>RabbitMQ</PackageTags>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Nullable>enable</Nullable>
   </PropertyGroup>

@@ -1,3 +1,5 @@
+using System.Threading.Tasks;
+
 namespace RabbitMQ.Client.Easy
 {
     public interface IPublisher
