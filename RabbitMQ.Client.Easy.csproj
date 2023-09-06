@@ -1,8 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <Title>RabbitMQ.Client.Easy</Title>
     <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <PackageId>RabbitMQ.Client.Easy</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>Hamidreza.Taammoli</Authors>
+    <Description>RabbitMQ Client Easy</Description>
+    <PackageTags>RabbitMQ</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
