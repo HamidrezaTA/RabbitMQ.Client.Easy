@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "console_consumer",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/toys/consumer/consumer_console/bin/Debug/net7.0/consumer_console.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/toys/consumer/consumer_console",
+            "console": "externalTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "console_publisher",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/toys/publisher/publisher_console/bin/Debug/net7.0/publisher_console.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/toys/publisher/publisher_console",
+            "console": "externalTerminal",
+            "stopAtEntry": false
+        }
+    ]
+}

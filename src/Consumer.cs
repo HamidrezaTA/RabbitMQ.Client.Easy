@@ -47,17 +47,17 @@ namespace RabbitMQ.Client.Easy
             channel.QueueDeclare(queue: _queueName, durable: _durable, exclusive: _exclusive, autoDelete: _autoDelete, arguments: null);
             var consumer = new EventingBasicConsumer(channel);
 
-            consumer.Received += (model, ea) =>
+            consumer.Received += async (model, ea) =>
             {
                 var body = ea.Body;
                 var messageAsArray = body.ToArray();
-                Subscribe(messageAsArray);
+                await SubscribeAsync(messageAsArray);
             };
 
             channel.BasicConsume(queue: _queueName, autoAck: _autoAck, consumer: consumer);
         }
 
-        public abstract void Subscribe(byte[]? messageAsArray);
+        public abstract Task SubscribeAsync(byte[]? messageAsArray);
 
         public Task StopAsync(CancellationToken cancellationToken)
         {

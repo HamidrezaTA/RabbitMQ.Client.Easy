@@ -1,0 +1,51 @@
+version: '3.8'
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672" # RabbitMQ main port
+      - "15672:15672" # RabbitMQ management plugin port
+    restart: always
+    networks:
+      - RabbitMqLaboratory
+  publisher_console:
+    build:
+      context: .
+      dockerfile: toys/publisher/publisher_console/Dockerfile
+    ports:
+      - "8000:80"
+    container_name: publisher_console
+    networks:
+      - RabbitMqLaboratory
+  publisher_api:
+    build:
+      context: .
+      dockerfile: toys/publisher/publisher_api/Dockerfile
+    ports:
+      - "8001:80"
+    container_name: publisher_api
+    networks:
+      - RabbitMqLaboratory
+  consumer_console:
+    build:
+      context: .
+      dockerfile: toys/consumer/consumer_console/Dockerfile
+    ports:
+      - "8002:80"
+    container_name: consumer_console
+    networks:
+      - RabbitMqLaboratory
+  consumer_api:
+    build:
+      context: .
+      dockerfile: toys/consumer/consumer_api/Dockerfile
+    ports:
+      - "8003:80"
+    container_name: consumer_api
+    networks:
+      - RabbitMqLaboratory
+networks:
+  RabbitMqLaboratory:
+    driver: bridge
+    external: false

@@ -1,3 +1,4 @@
+using System;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace RabbitMQ.Client.Easy
@@ -14,7 +15,9 @@ namespace RabbitMQ.Client.Easy
                     HostName = rabbitMqConfigurations.HostName,
                     Port = rabbitMqConfigurations.Port,
                     UserName = rabbitMqConfigurations.UserName,
-                    Password = rabbitMqConfigurations.Password
+                    Password = rabbitMqConfigurations.Password,
+                    AutomaticRecoveryEnabled = true,
+                    RequestedHeartbeat = TimeSpan.FromSeconds(15)
                 };
 
                 return factory.CreateConnection();
